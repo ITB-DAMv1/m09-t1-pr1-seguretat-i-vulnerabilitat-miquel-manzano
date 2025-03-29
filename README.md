@@ -150,14 +150,20 @@ Per implementar tokens a .NET podem utilitzar IdentityServer.
 
 6.  **Indica les referències que has consultat, seguint el següent format:**
 
-https://learn.microsoft.com/es-es/dotnet/architecture/maui/authentication-and-authorization
-https://www.cloudflare.com/es-es/learning/access-management/token-based-authentication/
-https://cloud-google-com.translate.goog/docs/authentication/token-types?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=rq
-https://learn.microsoft.com/es-es/dotnet/framework/data/adonet/ef/security-considerations
-https://owasp.org/Top10/es/
+[title](https://www.example.com)
+
+Stonis, M., Pine, D., Montemagno, J., Schonning, N., (10/09/2024). [Autenticación y autorización](https://learn.microsoft.com/es-es/dotnet/architecture/maui/authentication-and-authorization).
+
+Cloudflare. (unknown). [¿Qué es la autenticación basada en token?](https://www.cloudflare.com/es-es/learning/access-management/token-based-authentication/).
+
+Google. (2025-03-26). [Tipos de tokens](https://cloud.google.com/docs/authentication/token-types?hl=es-419).
+
+Oxford, C., Warren, G. ... (10/05/2023). [Consideraciones de seguridad (Entity Framework)](https://learn.microsoft.com/es-es/dotnet/framework/data/adonet/ef/security-considerations).
+
+OWASP. (2021). [Bienvenido al OWASP Top 10 - 2021](https://owasp.org/Top10/es/).
 
 
-
+---
 
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/S9WTUTwx)
