@@ -31,6 +31,8 @@
      - Cifrat de dades en trànsit i en repòs (TLS, AES-256).
      - Control d’accés rigorós.
      - Evitar emmagatzemar dades sensibles innecessàries.
+   
+
 
 
 ---
@@ -90,7 +92,6 @@
 - Eviteu retornar resultats de `IQueryable` en exposar mètodes a autors de trucades que poden no ser de confiança  
 
 
-https://learn.microsoft.com/es-es/dotnet/framework/data/adonet/ef/security-considerations
 
 3. **L’empresa a la qual treballes desenvoluparà una aplicació web de venda d’obres d’art. Els artistes registren les seves obres amb fotografies, títol, descripció i preu.  Els clients poden comprar les obres i poden escriure ressenyes públiques dels artistes a qui han comprat. Tant clients com artistes han d’estar registrats. L’aplicació guarda nom, cognoms, adreça completa, dni i telèfon. En el cas dels artistes guarda les dades bancaries per fer els pagaments. Hi ha un tipus d’usuari Acount Manager que s’encarrega de verificar als nous artistes. Un cop aprovats poden pública i vendre les seves obres.**
 
@@ -125,16 +126,17 @@ Un token es un elemento simbólico que expide una fuente de confianza.
 
 ### Tipus de tokens:
 
-- Tokens d'accés  
-- Tokens d'identificació  
-- JWT autosignats  
-- Tokens d'actualització  
+- Tokens d'accés
+- Tokens d'identificació
+- JWT autosignats
+- Tokens d'actualització
 - Fitxes al portador
 
 Un **token web** és digital, no un objecte físic. Es tracta d'un missatge enviat per un servidor a un client, que el guarda de manera temporal. En les següents sol·licituds al servidor, el client adjunta una còpia del testimoni per verificar el seu estat d'autenticació.
 
-https://www.cloudflare.com/es-es/learning/access-management/token-based-authentication/
-https://cloud-google-com.translate.goog/docs/authentication/token-types?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=rq
+Per implementar tokens a .NET podem utilitzar IdentityServer.
+
+
 
 ---
 
@@ -148,8 +150,11 @@ https://cloud-google-com.translate.goog/docs/authentication/token-types?_x_tr_sl
 
 6.  **Indica les referències que has consultat, seguint el següent format:**
 
-
-
+https://learn.microsoft.com/es-es/dotnet/architecture/maui/authentication-and-authorization
+https://www.cloudflare.com/es-es/learning/access-management/token-based-authentication/
+https://cloud-google-com.translate.goog/docs/authentication/token-types?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=rq
+https://learn.microsoft.com/es-es/dotnet/framework/data/adonet/ef/security-considerations
+https://owasp.org/Top10/es/
 
 
 
