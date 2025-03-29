@@ -69,7 +69,7 @@
 
    - **Enumera i raona diferents formes que pot evitar un atac per SQL injection en projectes fets amb Razor Pages i Entity Framework.** 
 
-## Consideracions de seguretat a seguir segons la documentació d'EF:
+### Consideracions de seguretat a seguir segons la documentació d'EF:
 
 - Utilitzeu només proveïdors d'orígens de dades de confiança  
 - Xifreu la connexió per protegir les dades confidencials  
@@ -83,7 +83,7 @@
 - Restringiu l'accés a tots els fitxers de configuració  
 - Restringiu els permisos als fitxers d'assignació i de model  
 
-## Consideracions de seguretat per a les consultes a la base de dades  
+### Consideracions de seguretat per a les consultes a la base de dades  
 
 - Impediu els atacs d'injecció de SQL  
 - Eviteu conjunts de resultats massa grans  
@@ -119,6 +119,22 @@ https://learn.microsoft.com/es-es/dotnet/framework/data/adonet/ef/security-consi
 
 4. **En el control d’accessos, existeixen mètodes d’autenticació basats en tokens. Defineix l’autenticació basada en tokens. Quins tipus hi ha? Com funciona mitjançant la web? Cerca llibreries .Net que ens poden ajudar a implementar autenticació amb tokens.**
 
+L’autenticació basada en tokens és el procés de verificar la identitat mitjançant la validació d’un token. En la gestió d’accés, els servidors fan servir aquest sistema per confirmar la identitat d’un usuari, una API, un ordinador o un altre servidor.
+
+Un token es un elemento simbólico que expide una fuente de confianza. 
+
+### Tipus de tokens:
+
+- Tokens d'accés  
+- Tokens d'identificació  
+- JWT autosignats  
+- Tokens d'actualització  
+- Fitxes al portador
+
+Un **token web** és digital, no un objecte físic. Es tracta d'un missatge enviat per un servidor a un client, que el guarda de manera temporal. En les següents sol·licituds al servidor, el client adjunta una còpia del testimoni per verificar el seu estat d'autenticació.
+
+https://www.cloudflare.com/es-es/learning/access-management/token-based-authentication/
+https://cloud-google-com.translate.goog/docs/authentication/token-types?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=rq
 
 ---
 
