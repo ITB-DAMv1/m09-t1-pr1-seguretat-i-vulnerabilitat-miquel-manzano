@@ -148,9 +148,7 @@ Per implementar tokens a .NET podem utilitzar IdentityServer.
 
 	**Per realitzar aquest exercici utilitza la llibreria System.Security.Cryptography.**
 
-6.  **Indica les referències que has consultat, seguint el següent format:**
-
-[title](https://www.example.com)
+## Bibliografia
 
 Stonis, M., Pine, D., Montemagno, J., Schonning, N., (10/09/2024). [Autenticación y autorización](https://learn.microsoft.com/es-es/dotnet/architecture/maui/authentication-and-authorization).
 
