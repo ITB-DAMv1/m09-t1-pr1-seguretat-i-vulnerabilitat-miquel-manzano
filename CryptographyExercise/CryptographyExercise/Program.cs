@@ -50,7 +50,7 @@ internal class Program
         }
     }
 
-    static void RegisterUser()
+    public static void RegisterUser()
     {
         Console.Write("Introdueix el nom d'usuari: ");
         string username = Console.ReadLine();
@@ -73,7 +73,7 @@ internal class Program
         }
     }
 
-    static void VerifyUser()
+    public static void VerifyUser()
     {
         if (string.IsNullOrEmpty(storedUsername))
         {
@@ -105,7 +105,7 @@ internal class Program
         }
     }
 
-    static void EncryptDecryptWithRSA()
+    public static void EncryptDecryptWithRSA()
     {
         Console.Write("Introdueix el text a encriptar: ");
         string originalText = Console.ReadLine();
